@@ -9,23 +9,22 @@
 */
 .front {
 	position: absolute;
+	transition: transform 1s;
 }
 
 .back {
 	postition: static;
+	transition: transform 1s;
+	-webkit-transform: rotateY(-180deg);
+	-webkit-backface-visibility: hidden;
 }
 
 .portfolio-item:hover .front {
-	opacity: 1;
-	transition: 3s;
 	-webkit-transform: rotateY(180deg);
-	-webkit-transform-style: preserve 3d;
-	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
 }
 .portfolio-item:hover .back {
-	opacity: 0;
-	transition: 3s;
-	-webkit-transform: rotateY(180deg);
-	-webkit-transform-style: preserve 3d;
+	-webkit-transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
 	-webkit-backface-visibility: hidden;
 }
